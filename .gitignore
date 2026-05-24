@@ -1,0 +1,22 @@
+# Local IDE Configurations
+.vscode/
+*.code-workspace
+
+# OS / Environments
+.DS_Store
+node_modules/
+.next/
+.vercel/
+dist/
+build/
+
+# Personal Credentials & Incident Audits
+public/Mustafa_Iqbal_CV.pdf
+public/assets/resume.pdf
+public/assets/Oldresume.pdf
+public/assets/Incident_Report_Analysis_NIST_Framework_*
+public/assets/SQL Filters — Cybersecurity Incident Investi*
+
+# Temp Backups
+public/images/old.jpg
+public/images/Menu.jpg
