@@ -4,10 +4,10 @@ import { useReveal } from '@/hooks/useReveal'
 import { SOCIAL_LINKS, FORMSPREE_URL } from '@/lib/constants'
 
 const contactInfo = [
-  { icon: '✉', iconBg: 'var(--lime-dim)',             label: 'Email',     value: 'talhamustafa642@gmail.com', href: SOCIAL_LINKS.email },
-  { icon: '📞', iconBg: 'rgba(52,211,153,.08)',        label: 'WhatsApp',  value: '+92 330 2479956',            href: SOCIAL_LINKS.whatsapp },
-  { icon: '📍', iconBg: 'var(--blue-dim)',             label: 'Location',  value: 'Karachi, Pakistan',          href: undefined },
-  { icon: '🔗', iconBg: 'rgba(167,139,250,.08)',       label: 'Portfolio', value: 'mustafa-iqbal.vercel.app',   href: 'https://mustafa-iqbal.vercel.app' },
+  { icon: '✉', iconBg: 'var(--lime-dim)', label: 'Email', value: 'talhamustafa642@gmail.com', href: SOCIAL_LINKS.email },
+  { icon: '📞', iconBg: 'rgba(52,211,153,.08)', label: 'WhatsApp', value: '+92 330 2479956', href: SOCIAL_LINKS.whatsapp },
+  { icon: '📍', iconBg: 'var(--blue-dim)', label: 'Location', value: 'Karachi, Pakistan', href: undefined },
+  { icon: '🔗', iconBg: 'rgba(167,139,250,.08)', label: 'Portfolio', value: 'mustafa-cyberhub.vercel.app', href: 'https://mustafa-cyberhub.vercel.app' },
 ]
 
 export default function Contact() {
@@ -50,7 +50,7 @@ export default function Contact() {
               </div>
             ))}
             <div style={{ display: 'flex', gap: '.5rem', marginTop: '.4rem' }}>
-              <a href={SOCIAL_LINKS.github}   target="_blank" rel="noopener noreferrer" className="pill">⬡ GitHub</a>
+              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="pill">⬡ GitHub</a>
               <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="pill">in LinkedIn</a>
             </div>
           </div>
@@ -60,8 +60,8 @@ export default function Contact() {
             <form ref={formRef} onSubmit={handleSubmit} noValidate>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.8rem' }} className="form-row">
                 {[
-                  { id: 'cf-name',  name: 'name',    label: 'Name',    type: 'text',  placeholder: 'Your name',        autocomplete: 'name' },
-                  { id: 'cf-email', name: 'email',   label: 'Email',   type: 'email', placeholder: 'you@example.com',  autocomplete: 'email' },
+                  { id: 'cf-name', name: 'name', label: 'Name', type: 'text', placeholder: 'Your name', autocomplete: 'name' },
+                  { id: 'cf-email', name: 'email', label: 'Email', type: 'email', placeholder: 'you@example.com', autocomplete: 'email' },
                 ].map((f) => (
                   <div key={f.id} style={{ display: 'flex', flexDirection: 'column', gap: '.35rem', marginBottom: '.85rem' }}>
                     <label htmlFor={f.id} style={{ fontFamily: 'var(--ff-mono)', fontSize: '.67rem', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gray2)' }}>{f.label}</label>
@@ -86,11 +86,11 @@ export default function Contact() {
                 className="btn btn-lime"
                 style={{ width: '100%', justifyContent: 'center', cursor: 'none', opacity: status === 'sending' ? .6 : 1 }}
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                 {status === 'sending' ? 'Sending…' : 'Send Message'}
               </button>
 
-              {status === 'ok'  && <p role="status" style={{ fontFamily: 'var(--ff-mono)', fontSize: '.72rem', textAlign: 'center', marginTop: '.6rem', color: 'var(--lime)' }}>✓ Message sent!</p>}
+              {status === 'ok' && <p role="status" style={{ fontFamily: 'var(--ff-mono)', fontSize: '.72rem', textAlign: 'center', marginTop: '.6rem', color: 'var(--lime)' }}>✓ Message sent!</p>}
               {status === 'err' && <p role="status" style={{ fontFamily: 'var(--ff-mono)', fontSize: '.72rem', textAlign: 'center', marginTop: '.6rem', color: '#f87171' }}>✗ Something went wrong. Try emailing directly.</p>}
             </form>
           </div>

@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 // OR we use a Google alternative - we'll use a fallback that looks similar
 const clashDisplay = localFont({
   src: [
-    { path: '../public/fonts/ClashDisplay-Medium.woff2',  weight: '500' },
+    { path: '../public/fonts/ClashDisplay-Medium.woff2', weight: '500' },
     { path: '../public/fonts/ClashDisplay-Semibold.woff2', weight: '600' },
-    { path: '../public/fonts/ClashDisplay-Bold.woff2',    weight: '700' },
+    { path: '../public/fonts/ClashDisplay-Bold.woff2', weight: '700' },
   ],
   variable: '--font-clash',
   display: 'swap',
@@ -37,8 +37,7 @@ export const metadata: Metadata = {
     'Mustafa Iqbal — BSCS student at SZABIST, Karachi. Full-stack developer and cybersecurity specialist building secure, production-ready software.',
   authors: [{ name: 'Mustafa Muhammad Iqbal' }],
   robots: 'index, follow',
-  metadataBase: new URL('https://mustafa-iqbal.vercel.app'),
-  alternates: { canonical: '/' },
+  metadataBase: new URL('https://mustafa-cyberhub.vercel.app'), alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: '/',
